@@ -74,40 +74,34 @@
         </div>
     </div>
     
-<!-- Carousel -->
+<!-- Auto Carousel -->
 <div class="relative max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg">
-  <div class="flex transition-transform duration-500 ease-in-out" id="carousel-inner">
+  <div class="flex transition-transform duration-700 ease-in-out" id="carousel-inner">
     <!-- Slide 1 -->
     <div class="min-w-full">
-      <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1" class="w-full">
+      <img src="https://via.placeholder.com/800x400/3b82f6/ffffff?text=Slide+1" alt="Slide 1" class="w-full">
     </div>
     <!-- Slide 2 -->
     <div class="min-w-full">
-      <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2" class="w-full">
+      <img src="https://via.placeholder.com/800x400/f97316/ffffff?text=Slide+2" alt="Slide 2" class="w-full">
     </div>
     <!-- Slide 3 -->
     <div class="min-w-full">
-      <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3" class="w-full">
+      <img src="https://via.placeholder.com/800x400/10b981/ffffff?text=Slide+3" alt="Slide 3" class="w-full">
+    </div>
+    <!-- Slide 4 -->
+    <div class="min-w-full">
+      <img src="https://via.placeholder.com/800x400/8b5cf6/ffffff?text=Slide+4" alt="Slide 4" class="w-full">
     </div>
   </div>
-
-  <!-- Navigasi (Opsional) -->
-  <button id="prev" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-80">
-    &#10094;
-  </button>
-  <button id="next" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-80">
-    &#10095;
-  </button>
 </div>
 
-<!-- JavaScript untuk auto slide -->
 <script>
   const carousel = document.getElementById('carousel-inner');
   const slides = carousel.children;
   let index = 0;
   const total = slides.length;
 
-  // Fungsi pindah slide
   function showSlide(i) {
     carousel.style.transform = translateX(-${i * 100}%);
   }
@@ -117,17 +111,6 @@
     index = (index + 1) % total;
     showSlide(index);
   }, 3000);
-
-  // Tombol navigasi
-  document.getElementById('prev').addEventListener('click', () => {
-    index = (index - 1 + total) % total;
-    showSlide(index);
-  });
-
-  document.getElementById('next').addEventListener('click', () => {
-    index = (index + 1) % total;
-    showSlide(index);
-  });
 </script>
     
   <!-- Features -->
