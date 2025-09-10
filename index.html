@@ -267,56 +267,36 @@
     </div>
 </div>
 
-<!-- Banner Animasi Pendaftaran Instruktur -->
-<div id="instructorBanner" class="fixed bottom-6 right-6 bg-blue-600 text-white px-6 py-4 rounded-xl shadow-xl flex items-center gap-4 transform translate-x-full animate-slide-in cursor-pointer">
-    <img src="https://via.placeholder.com/50" alt="Instruktur" class="w-12 h-12 rounded-full object-cover">
-    <div>
-        <h4 class="font-bold text-lg">Daftar Instruktur Gratis!</h4>
-        <p class="text-sm">Bagikan ilmu codingmu tanpa biaya pendaftaran.</p>
+<!-- Alert Banner -->
+<div id="infoAlert" class="fixed top-6 right-6 bg-blue-600 text-white px-5 py-4 rounded-lg shadow-lg flex items-center gap-3 transform translate-x-full transition-transform duration-500">
+    <!-- Icon SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
+    </svg>
+    <div class="flex-1">
+        <p class="font-medium">Daftar Instruktur Gratis! Tanpa biaya pendaftaran.</p>
     </div>
-    <button id="closeBanner" class="ml-4 text-white font-bold bg-red-600 w-8 h-8 rounded-full flex items-center justify-center hover:bg-red-700 transition">&times;</button>
+    <button id="closeAlert" class="text-white font-bold hover:text-gray-200">&times;</button>
 </div>
 
-<style>
-    @keyframes slideIn {
-        0% { transform: translateX(120%); }
-        60% { transform: translateX(-10%); }
-        80% { transform: translateX(5%); }
-        100% { transform: translateX(0); }
-    }
-
-    .animate-slide-in {
-        animation: slideIn 1s ease forwards;
-    }
-
-    /* Optional: loop subtle bounce */
-    @keyframes bounce {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-5px); }
-    }
-
-    .animate-bounce-continuous {
-        animation: bounce 2s infinite;
-    }
-</style>
-
 <script>
-    // Tambahkan bounce terus-menerus setelah slide-in
-    const banner = document.getElementById('instructorBanner');
-    banner.addEventListener('animationend', () => {
-        banner.classList.add('animate-bounce-continuous');
+    const alertBanner = document.getElementById('infoAlert');
+    const closeBtn = document.getElementById('closeAlert');
+
+    // Slide-in saat load
+    window.addEventListener('load', () => {
+        alertBanner.classList.remove('translate-x-full');
+        alertBanner.classList.add('translate-x-0');
+
+        // Auto close after 5s
+        setTimeout(() => {
+            alertBanner.classList.add('translate-x-full');
+        }, 5000);
     });
 
-    // Tombol close
-    document.getElementById('closeBanner').addEventListener('click', () => {
-        banner.remove();
-    });
-
-    // Klik banner bisa redirect ke halaman pendaftaran
-    banner.addEventListener('click', (e) => {
-        if(e.target.id !== 'closeBanner') {
-            window.location.href = '/daftar-instruktur'; // ganti sesuai link pendaftaran
-        }
+    // Manual close
+    closeBtn.addEventListener('click', () => {
+        alertBanner.classList.add('translate-x-full');
     });
 </script>
 
