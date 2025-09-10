@@ -267,6 +267,59 @@
     </div>
 </div>
 
+<!-- Banner Animasi Pendaftaran Instruktur -->
+<div id="instructorBanner" class="fixed bottom-6 right-6 bg-blue-600 text-white px-6 py-4 rounded-xl shadow-xl flex items-center gap-4 transform translate-x-full animate-slide-in cursor-pointer">
+    <img src="https://via.placeholder.com/50" alt="Instruktur" class="w-12 h-12 rounded-full object-cover">
+    <div>
+        <h4 class="font-bold text-lg">Daftar Instruktur Gratis!</h4>
+        <p class="text-sm">Bagikan ilmu codingmu tanpa biaya pendaftaran.</p>
+    </div>
+    <button id="closeBanner" class="ml-4 text-white font-bold bg-red-600 w-8 h-8 rounded-full flex items-center justify-center hover:bg-red-700 transition">&times;</button>
+</div>
+
+<style>
+    @keyframes slideIn {
+        0% { transform: translateX(120%); }
+        60% { transform: translateX(-10%); }
+        80% { transform: translateX(5%); }
+        100% { transform: translateX(0); }
+    }
+
+    .animate-slide-in {
+        animation: slideIn 1s ease forwards;
+    }
+
+    /* Optional: loop subtle bounce */
+    @keyframes bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+
+    .animate-bounce-continuous {
+        animation: bounce 2s infinite;
+    }
+</style>
+
+<script>
+    // Tambahkan bounce terus-menerus setelah slide-in
+    const banner = document.getElementById('instructorBanner');
+    banner.addEventListener('animationend', () => {
+        banner.classList.add('animate-bounce-continuous');
+    });
+
+    // Tombol close
+    document.getElementById('closeBanner').addEventListener('click', () => {
+        banner.remove();
+    });
+
+    // Klik banner bisa redirect ke halaman pendaftaran
+    banner.addEventListener('click', (e) => {
+        if(e.target.id !== 'closeBanner') {
+            window.location.href = '/daftar-instruktur'; // ganti sesuai link pendaftaran
+        }
+    });
+</script>
+
 <!-- Popup Modal Fokus Gambar -->
 <div id="popup" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
     <div class="bg-white rounded-xl shadow-2xl max-w-lg w-full relative overflow-hidden">
