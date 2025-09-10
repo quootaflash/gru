@@ -152,38 +152,120 @@
   }
 </style>
     
- <!-- Features -->
-    <div class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Kenapa Belajar di Orilix.net?</h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Kami menghadirkan pengalaman belajar coding yang berbeda dengan pendekatan praktis dan berbasis proyek nyata.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-laptop-code text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Kurikulum Industri</h3>
-                    <p class="text-gray-600">Materi selalu update sesuai kebutuhan industri teknologi terkini yang diajarkan langsung oleh praktisi.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-chalkboard-teacher text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Instruktur Berpengalaman</h3>
-                    <p class="text-gray-600">Belajar dari mentor yang telah berkecimpung di industri teknologi minimal 5 tahun.</p>
-                </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300">
-                    <div class="text-blue-600 mb-4">
-                        <i class="fas fa-briefcase text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Proyek Nyata</h3>
-                    <p class="text-gray-600">Bangun portofolio dengan mengerjakan studi kasus dan proyek nyata yang relevan dengan kebutuhan perusahaan.</p>
-                </div>
-            </div>
-        </div>
+<!-- Features -->
+<div class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Kenapa gabung di Eragru?</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">Dapatkan berbagai kemudahan, mengajar di Eragru</p>
     </div>
+
+    <!-- Scrollable container -->
+    <div class="flex space-x-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-200">
+      <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 min-w-[280px]">
+        <div class="text-blue-600 mb-4">
+          <i class="fa-solid fa-dollar-sign text-4xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Kurikulum Industri</h3>
+        <p class="text-gray-600">Materi selalu update sesuai kebutuhan industri teknologi terkini yang diajarkan langsung oleh praktisi.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 min-w-[280px]">
+        <div class="text-blue-600 mb-4">
+          <i class="fa-regular fa-clock text-4xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Fleksibilitas Waktu</h3>
+        <p class="text-gray-600">Atur jadwal mengajar sesuai waktu Anda, fleksibel dan tidak mengikat.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 min-w-[280px]">
+        <div class="text-blue-600 mb-4">
+          <i class="fa-solid fa-chalkboard-teacher text-4xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Instruktur Berpengalaman</h3>
+        <p class="text-gray-600">Belajar dari mentor yang telah berkecimpung di industri teknologi minimal 5 tahun.</p>
+      </div>
+
+      <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 min-w-[280px]">
+        <div class="text-blue-600 mb-4">
+          <i class="fa-solid fa-briefcase text-4xl"></i>
+        </div>
+        <h3 class="text-xl font-bold mb-3">Proyek Nyata</h3>
+        <p class="text-gray-600">Bangun portofolio dengan mengerjakan studi kasus dan proyek nyata yang relevan dengan kebutuhan perusahaan.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tailwind CSS scrollbar styling -->
+<style>
+  /* Scrollbar minimalis */
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 6px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: #e5e7eb; /* gray-200 */
+  }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: #3b82f6; /* blue-500 */
+    border-radius: 10px;
+  }
+</style>
+<!-- Carousel -->
+<div class="relative max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg">
+  <div class="flex transition-transform duration-500 ease-in-out" id="carousel-inner">
+    <!-- Slide 1 -->
+    <div class="min-w-full">
+      <img src="https://via.placeholder.com/800x400?text=Slide+1" alt="Slide 1" class="w-full">
+    </div>
+    <!-- Slide 2 -->
+    <div class="min-w-full">
+      <img src="https://via.placeholder.com/800x400?text=Slide+2" alt="Slide 2" class="w-full">
+    </div>
+    <!-- Slide 3 -->
+    <div class="min-w-full">
+      <img src="https://via.placeholder.com/800x400?text=Slide+3" alt="Slide 3" class="w-full">
+    </div>
+  </div>
+
+  <!-- Navigasi (Opsional) -->
+  <button id="prev" class="absolute top-1/2 left-4 -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-80">
+    &#10094;
+  </button>
+  <button id="next" class="absolute top-1/2 right-4 -translate-y-1/2 bg-white bg-opacity-50 rounded-full p-2 hover:bg-opacity-80">
+    &#10095;
+  </button>
+</div>
+
+<!-- JavaScript untuk auto slide -->
+<script>
+  const carousel = document.getElementById('carousel-inner');
+  const slides = carousel.children;
+  let index = 0;
+  const total = slides.length;
+
+  // Fungsi pindah slide
+  function showSlide(i) {
+    carousel.style.transform = translateX(-${i * 100}%);
+  }
+
+  // Auto slide setiap 3 detik
+  setInterval(() => {
+    index = (index + 1) % total;
+    showSlide(index);
+  }, 3000);
+
+  // Tombol navigasi
+  document.getElementById('prev').addEventListener('click', () => {
+    index = (index - 1 + total) % total;
+    showSlide(index);
+  });
+
+  document.getElementById('next').addEventListener('click', () => {
+    index = (index + 1) % total;
+    showSlide(index);
+  });
+</script>
     
    <!-- Learning Path -->
     <div class="py-16 bg-blue-50">
