@@ -74,20 +74,19 @@
         </div>
     </div>
     
-<!-- Auto Carousel -->
 <div class="relative max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg">
-  <div class="flex w-[400%] transition-transform duration-700 ease-in-out" id="carousel-inner">
-    <div class="w-full flex-shrink-0">
-      <img src="https://via.placeholder.com/800x400/3b82f6/ffffff?text=Slide+1" alt="Slide 1" class="w-full">
+  <div id="carousel-inner" style="display:flex; width:400%; transition: transform 0.7s ease-in-out;">
+    <div style="flex:0 0 25%;">
+      <img src="https://via.placeholder.com/800x400/3b82f6/ffffff?text=Slide+1" class="w-full">
     </div>
-    <div class="w-full flex-shrink-0">
-      <img src="https://via.placeholder.com/800x400/f97316/ffffff?text=Slide+2" alt="Slide 2" class="w-full">
+    <div style="flex:0 0 25%;">
+      <img src="https://via.placeholder.com/800x400/f97316/ffffff?text=Slide+2" class="w-full">
     </div>
-    <div class="w-full flex-shrink-0">
-      <img src="https://via.placeholder.com/800x400/10b981/ffffff?text=Slide+3" alt="Slide 3" class="w-full">
+    <div style="flex:0 0 25%;">
+      <img src="https://via.placeholder.com/800x400/10b981/ffffff?text=Slide+3" class="w-full">
     </div>
-    <div class="w-full flex-shrink-0">
-      <img src="https://via.placeholder.com/800x400/8b5cf6/ffffff?text=Slide+4" alt="Slide 4" class="w-full">
+    <div style="flex:0 0 25%;">
+      <img src="https://via.placeholder.com/800x400/8b5cf6/ffffff?text=Slide+4" class="w-full">
     </div>
   </div>
 </div>
@@ -99,7 +98,7 @@
   const total = slides.length;
 
   function showSlide(i) {
-    carousel.style.transform = translateX(-${i * 100}%);
+    carousel.style.transform = translateX(-${i * (100 / total)}%);
   }
 
   setInterval(() => {
@@ -107,69 +106,9 @@
     showSlide(index);
   }, 3000);
 
-  // Jalankan sekali agar posisi awal benar
+  // posisi awal
   showSlide(index);
 </script>
-    
-  <!-- Features -->
-<div class="py-16 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Kenapa gabung di Eragru?</h2>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto">Dapatkan berbagai kemudahan, mengajar di Eragru</p>
-    </div>
-
-    <!-- Scrollable container -->
-    <div class="flex space-x-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-blue-500 scrollbar-track-gray-200">
-      <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 min-w-[280px]">
-        <div class="text-blue-600 mb-4">
-          <i class="fa-solid fa-dollar-sign text-4xl"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Kurikulum Industri</h3>
-        <p class="text-gray-600">Materi selalu update sesuai kebutuhan industri teknologi terkini yang diajarkan langsung oleh praktisi.</p>
-      </div>
-
-      <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 min-w-[280px]">
-        <div class="text-blue-600 mb-4">
-          <i class="fa-regular fa-clock text-4xl"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Fleksibilitas Waktu</h3>
-        <p class="text-gray-600">Atur jadwal mengajar sesuai waktu Anda, fleksibel dan tidak mengikat.</p>
-      </div>
-
-      <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 min-w-[280px]">
-        <div class="text-blue-600 mb-4">
-          <i class="fa-solid fa-chalkboard-teacher text-4xl"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Instruktur Berpengalaman</h3>
-        <p class="text-gray-600">Belajar dari mentor yang telah berkecimpung di industri teknologi minimal 5 tahun.</p>
-      </div>
-
-      <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition duration-300 min-w-[280px]">
-        <div class="text-blue-600 mb-4">
-          <i class="fa-solid fa-briefcase text-4xl"></i>
-        </div>
-        <h3 class="text-xl font-bold mb-3">Proyek Nyata</h3>
-        <p class="text-gray-600">Bangun portofolio dengan mengerjakan studi kasus dan proyek nyata yang relevan dengan kebutuhan perusahaan.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- Tailwind CSS scrollbar styling -->
-<style>
-  /* Scrollbar minimalis */
-  .scrollbar-thin::-webkit-scrollbar {
-    height: 6px;
-  }
-  .scrollbar-thin::-webkit-scrollbar-track {
-    background: #e5e7eb; /* gray-200 */
-  }
-  .scrollbar-thin::-webkit-scrollbar-thumb {
-    background-color: #3b82f6; /* blue-500 */
-    border-radius: 10px;
-  }
-</style>
     
    <!-- Learning Path -->
     <div class="py-16 bg-blue-50">
