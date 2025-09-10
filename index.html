@@ -73,18 +73,19 @@
             </div>
         </div>
     </div>
-<!-- Features Interaktif Scroll Horizontal -->
-<div class="py-16 bg-gray-50">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+<!-- Features Interaktif Scroll Horizontal Full-width dengan Fade -->
+<div class="relative w-full overflow-x-hidden bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative">
     <div class="text-center mb-12">
-      <h2 class="text-3xl font-bold text-gray-900 mb-4">Kenapa Gabung di Eragru?</h2>
-      <p class="text-lg text-gray-600 max-w-3xl mx-auto">Bergabung sebagai instruktur coding, berbagi ilmu, dan tumbuh bersama.</p>
+      <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Kenapa Gabung di Eragru?</h2>
+      <p class="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">Bergabung sebagai instruktur coding, berbagi ilmu, dan tumbuh bersama.</p>
     </div>
 
     <!-- Container scroll horizontal -->
-    <div class="flex space-x-6 overflow-x-auto scrollbar-hide animate-scroll">
+    <div class="flex space-x-6 animate-scroll relative">
       <!-- Card 1 -->
-      <div class="relative min-w-[300px] overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+      <div class="relative min-w-[250px] sm:min-w-[300px] md:min-w-[350px] overflow-hidden rounded-xl shadow-lg group cursor-pointer flex-shrink-0">
         <img src="https://via.placeholder.com/400x300/3b82f6/ffffff?text=Kurikulum+Industri" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
         <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
           <p class="text-white text-lg font-semibold px-4 text-center">Materi selalu update sesuai industri</p>
@@ -92,7 +93,7 @@
       </div>
 
       <!-- Card 2 -->
-      <div class="relative min-w-[300px] overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+      <div class="relative min-w-[250px] sm:min-w-[300px] md:min-w-[350px] overflow-hidden rounded-xl shadow-lg group cursor-pointer flex-shrink-0">
         <img src="https://via.placeholder.com/400x300/f97316/ffffff?text=Fleksibilitas+Waktu" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
         <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
           <p class="text-white text-lg font-semibold px-4 text-center">Atur jadwal mengajar sesuai waktu Anda</p>
@@ -100,7 +101,7 @@
       </div>
 
       <!-- Card 3 -->
-      <div class="relative min-w-[300px] overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+      <div class="relative min-w-[250px] sm:min-w-[300px] md:min-w-[350px] overflow-hidden rounded-xl shadow-lg group cursor-pointer flex-shrink-0">
         <img src="https://via.placeholder.com/400x300/10b981/ffffff?text=Instruktur+Berpengalaman" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
         <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
           <p class="text-white text-lg font-semibold px-4 text-center">Belajar dari mentor dengan pengalaman 5+ tahun</p>
@@ -108,37 +109,49 @@
       </div>
 
       <!-- Card 4 -->
-      <div class="relative min-w-[300px] overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+      <div class="relative min-w-[250px] sm:min-w-[300px] md:min-w-[350px] overflow-hidden rounded-xl shadow-lg group cursor-pointer flex-shrink-0">
         <img src="https://via.placeholder.com/400x300/8b5cf6/ffffff?text=Proyek+Nyata" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
         <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
           <p class="text-white text-lg font-semibold px-4 text-center">Bangun portofolio dengan proyek nyata</p>
         </div>
       </div>
+
+      <!-- Duplikasi untuk loop mulus -->
+      <div class="relative min-w-[250px] sm:min-w-[300px] md:min-w-[350px] overflow-hidden rounded-xl shadow-lg group cursor-pointer flex-shrink-0">
+        <img src="https://via.placeholder.com/400x300/3b82f6/ffffff?text=Kurikulum+Industri" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+          <p class="text-white text-lg font-semibold px-4 text-center">Materi selalu update sesuai industri</p>
+        </div>
+      </div>
     </div>
+
+    <!-- Fade kiri dan kanan -->
+    <div class="absolute top-0 left-0 h-full w-16 bg-gradient-to-r from-gray-50 to-transparent pointer-events-none"></div>
+    <div class="absolute top-0 right-0 h-full w-16 bg-gradient-to-l from-gray-50 to-transparent pointer-events-none"></div>
   </div>
 </div>
 
-<!-- Tailwind CSS tambahan di global.css -->
 <style>
-  /* Hide scrollbar */
-  .scrollbar-hide::-webkit-scrollbar {
-    display: none;
-  }
-  .scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
   /* Animasi scroll horizontal otomatis */
   @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
   .animate-scroll {
-    animation: scroll 20s linear infinite;
+    display: flex;
+    animation: scroll 25s linear infinite;
+  }
+
+  /* Hide scrollbar */
+  .flex::-webkit-scrollbar {
+    display: none;
+  }
+  .flex {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 </style>
-
+    
  <!-- Features -->
     <div class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
