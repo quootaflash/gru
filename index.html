@@ -217,33 +217,68 @@
         </div>
     </div>
 
-<!-- Custom YouTube Video Embed -->
-<div class="max-w-3xl mx-auto my-16">
-  <div class="relative w-full aspect-video rounded-2xl shadow-2xl overflow-hidden border-4 border-indigo-500">
-    <iframe 
-      class="absolute top-0 left-0 w-full h-full"
-      src="https://www.youtube.com/embed/VIDEO_ID?controls=0&modestbranding=1&rel=0&showinfo=0" 
-      title="Custom Video"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
+<!-- Horizontal Scroll Video YouTube Custom -->
+<div class="relative w-full overflow-x-auto py-16 bg-gray-50 scrollbar-hide">
+  <div class="max-w-7xl mx-auto px-4 flex space-x-6">
+    <!-- Video 1 -->
+    <div class="relative min-w-[250px] sm:min-w-[300px] md:min-w-[400px] aspect-video rounded-2xl shadow-2xl overflow-hidden border-4 border-indigo-500 flex-shrink-0">
+      <iframe 
+        class="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/VIDEO_ID_1?controls=0&modestbranding=1&rel=0&showinfo=0" 
+        title="Video 1"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="relative min-w-[250px] sm:min-w-[300px] md:min-w-[400px] aspect-video rounded-2xl shadow-2xl overflow-hidden border-4 border-pink-500 flex-shrink-0">
+      <iframe 
+        class="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/VIDEO_ID_2?controls=0&modestbranding=1&rel=0&showinfo=0" 
+        title="Video 2"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- Video 3 -->
+    <div class="relative min-w-[250px] sm:min-w-[300px] md:min-w-[400px] aspect-video rounded-2xl shadow-2xl overflow-hidden border-4 border-green-500 flex-shrink-0">
+      <iframe 
+        class="absolute top-0 left-0 w-full h-full"
+        src="https://www.youtube.com/embed/VIDEO_ID_3?controls=0&modestbranding=1&rel=0&showinfo=0" 
+        title="Video 3"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
   </div>
 </div>
 
 <style>
-  /* Optional: hover efek untuk frame */
+  /* Hide scrollbar */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Optional hover efek */
   .rounded-2xl:hover {
     transform: scale(1.03);
     transition: transform 0.3s ease;
   }
 
-  /* Tambahkan shadow tambahan jika ingin efek “floating” */
   .shadow-2xl {
     box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
   }
 </style>
-
   
    <!-- Community Section -->
     <div class="py-16 bg-white">
