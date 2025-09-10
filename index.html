@@ -283,22 +283,24 @@
     const alertBanner = document.getElementById('infoAlert');
     const closeBtn = document.getElementById('closeAlert');
 
-    // Slide-in saat load
-    window.addEventListener('load', () => {
-        // Geser ke posisi visible
-        alertBanner.classList.remove('translate-x-[-150%]');
-        alertBanner.classList.add('translate-x-0');
-
-        // Auto close setelah 5 detik
+    // Fungsi untuk slide-in dan slide-out
+    function showAlert() {
+        alertBanner.style.transform = 'translateX(0)'; // tampil
+        // Auto close 5 detik
         setTimeout(() => {
-            alertBanner.classList.add('translate-x-[-150%]');
+            alertBanner.style.transform = 'translateX(-150%)';
         }, 5000);
-    });
+    }
 
-    // Manual close
-    closeBtn.addEventListener('click', () => {
-        alertBanner.classList.add('translate-x-[-150%]');
-    });
+    function closeAlert() {
+        alertBanner.style.transform = 'translateX(-150%)';
+    }
+
+    // Slide-in saat load
+    window.addEventListener('load', showAlert);
+
+    // Tombol close
+    closeBtn.addEventListener('click', closeAlert);
 </script>
 
 <!-- Popup Modal Fokus Gambar -->
