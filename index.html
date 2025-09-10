@@ -267,9 +267,9 @@
     </div>
 </div>
 
-<!-- Alert Banner -->
-<div id="infoAlert" class="fixed top-6 right-6 bg-blue-600 text-white px-5 py-4 rounded-lg shadow-lg flex items-center gap-3 transform translate-x-full transition-transform duration-500">
-    <!-- Icon SVG -->
+<!-- Alert Banner di Kiri Bawah -->
+<div id="infoAlert" class="fixed bottom-6 left-6 bg-blue-600 text-white px-5 py-4 rounded-lg shadow-lg flex items-center gap-3 transform translate-x-[-150%] transition-transform duration-500 z-50">
+    <!-- Icon SVG Information -->
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M12 20a8 8 0 100-16 8 8 0 000 16z" />
     </svg>
@@ -285,18 +285,19 @@
 
     // Slide-in saat load
     window.addEventListener('load', () => {
-        alertBanner.classList.remove('translate-x-full');
+        // Geser ke posisi visible
+        alertBanner.classList.remove('translate-x-[-150%]');
         alertBanner.classList.add('translate-x-0');
 
-        // Auto close after 5s
+        // Auto close setelah 5 detik
         setTimeout(() => {
-            alertBanner.classList.add('translate-x-full');
+            alertBanner.classList.add('translate-x-[-150%]');
         }, 5000);
     });
 
     // Manual close
     closeBtn.addEventListener('click', () => {
-        alertBanner.classList.add('translate-x-full');
+        alertBanner.classList.add('translate-x-[-150%]');
     });
 </script>
 
