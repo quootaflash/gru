@@ -74,42 +74,49 @@
         </div>
     </div>
     
-<div class="relative max-w-4xl mx-auto overflow-hidden rounded-xl shadow-lg">
-  <div id="carousel-inner" style="display:flex; width:400%; transition: transform 0.7s ease-in-out;">
-    <div style="flex:0 0 25%;">
-      <img src="https://via.placeholder.com/800x400/3b82f6/ffffff?text=Slide+1" class="w-full">
+<!-- Features Interaktif -->
+<div class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Kenapa Gabung di Eragru?</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">Bergabung sebagai instruktur coding, berbagi ilmu, dan tumbuh bersama.</p>
     </div>
-    <div style="flex:0 0 25%;">
-      <img src="https://via.placeholder.com/800x400/f97316/ffffff?text=Slide+2" class="w-full">
-    </div>
-    <div style="flex:0 0 25%;">
-      <img src="https://via.placeholder.com/800x400/10b981/ffffff?text=Slide+3" class="w-full">
-    </div>
-    <div style="flex:0 0 25%;">
-      <img src="https://via.placeholder.com/800x400/8b5cf6/ffffff?text=Slide+4" class="w-full">
+
+    <div class="grid md:grid-cols-4 gap-6">
+      <!-- Card 1 -->
+      <div class="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+        <img src="https://via.placeholder.com/400x300/3b82f6/ffffff?text=Kurikulum+Industri" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+          <p class="text-white text-lg font-semibold px-4 text-center">Materi selalu update sesuai industri</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+        <img src="https://via.placeholder.com/400x300/f97316/ffffff?text=Fleksibilitas+Waktu" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+          <p class="text-white text-lg font-semibold px-4 text-center">Atur jadwal mengajar sesuai waktu Anda</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+        <img src="https://via.placeholder.com/400x300/10b981/ffffff?text=Instruktur+Berpengalaman" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+          <p class="text-white text-lg font-semibold px-4 text-center">Belajar dari mentor dengan pengalaman 5+ tahun</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="relative overflow-hidden rounded-xl shadow-lg group cursor-pointer">
+        <img src="https://via.placeholder.com/400x300/8b5cf6/ffffff?text=Proyek+Nyata" class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+          <p class="text-white text-lg font-semibold px-4 text-center">Bangun portofolio dengan proyek nyata</p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-<script>
-  const carousel = document.getElementById('carousel-inner');
-  const slides = carousel.children;
-  let index = 0;
-  const total = slides.length;
-
-  function showSlide(i) {
-    carousel.style.transform = translateX(-${i * (100 / total)}%);
-  }
-
-  setInterval(() => {
-    index = (index + 1) % total;
-    showSlide(index);
-  }, 3000);
-
-  // posisi awal
-  showSlide(index);
-</script>
-    
    <!-- Learning Path -->
     <div class="py-16 bg-blue-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
