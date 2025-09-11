@@ -173,96 +173,79 @@
         </div>
     </div>
   
-<!-- Kategori Instruktur Eracoding -->
-<div class="py-12 bg-white">
-  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-10">
-      <h2 class="text-3xl font-bold text-gray-900">Kategori Instruktur di Eracoding</h2>
-      <p class="mt-2 text-gray-600">Pilih jalur mengajar sesuai keahlian dan gaya Anda.</p>
+<div class="max-w-6xl mx-auto py-10 px-4">
+  <h2 class="text-2xl font-bold text-gray-900 mb-4">Kategori Instruktur</h2>
+  
+  <!-- Wrapper Scroll -->
+  <div class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
+    
+    <!-- EraPraxis -->
+    <div onclick="showDetail('EraPraxis')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:bg-blue-50 transition">
+      <img src="https://img.icons8.com/ios-filled/50/000000/briefcase.png" class="w-10 h-10 mx-auto mb-2"/>
+      <h3 class="text-center font-semibold text-gray-800">EraPraxis</h3>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-      
-      <!-- EraPraxis -->
-      <div class="flex items-start gap-3 p-4 rounded-lg bg-blue-50">
-        <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 16v-2m8-6h2M4 12H2m15.364-7.364l1.414 1.414M6.222 17.778l-1.414 1.414m0-12.728L6.222 6.222m12.728 12.728l-1.414-1.414" />
-        </svg>
-        <div>
-          <h3 class="font-semibold text-gray-900">EraPraxis</h3>
-          <p class="text-gray-600 text-sm">Instruktur praktisi industri dengan pengalaman nyata.</p>
-        </div>
-      </div>
-
-      <!-- EraLecture -->
-      <div class="flex items-start gap-3 p-4 rounded-lg bg-purple-50">
-        <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 20h9M12 4H3m9 16V4m0 0h9" />
-        </svg>
-        <div>
-          <h3 class="font-semibold text-gray-900">EraLecture</h3>
-          <p class="text-gray-600 text-sm">Instruktur akademisi dengan dasar teori yang kuat.</p>
-        </div>
-      </div>
-
-      <!-- EraStudio -->
-      <div class="flex items-start gap-3 p-4 rounded-lg bg-red-50">
-        <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 10l4.553 2.276A1 1 0 0120 13.118V17a2 2 0 01-2 2h-1M4 6h16M4 10h7m0 4H4" />
-        </svg>
-        <div>
-          <h3 class="font-semibold text-gray-900">EraStudio</h3>
-          <p class="text-gray-600 text-sm">Instruktur kreatif dengan pendekatan project & storytelling.</p>
-        </div>
-      </div>
-
-      <!-- EraCareer -->
-      <div class="flex items-start gap-3 p-4 rounded-lg bg-green-50">
-        <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2h6v2m-6-8V7h6v2M4 21h16a2 2 0 002-2V5a2 2 0 00-2-2H4a2 2 0 00-2 2v14a2 2 0 002 2z" />
-        </svg>
-        <div>
-          <h3 class="font-semibold text-gray-900">EraCareer</h3>
-          <p class="text-gray-600 text-sm">Instruktur fokus karier, portfolio, dan persiapan kerja.</p>
-        </div>
-      </div>
-
-      <!-- EraTeamUp -->
-      <div class="flex items-start gap-3 p-4 rounded-lg bg-yellow-50">
-        <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5V4H2v16h5M12 11a3 3 0 11-6 0 3 3 0 016 0zm0 0a5 5 0 015 5v1H7v-1a5 5 0 015-5z" />
-        </svg>
-        <div>
-          <h3 class="font-semibold text-gray-900">EraTeamUp</h3>
-          <p class="text-gray-600 text-sm">Instruktur kolaboratif untuk proyek tim dan networking.</p>
-        </div>
-      </div>
-
-      <!-- EraDeepTech -->
-      <div class="flex items-start gap-3 p-4 rounded-lg bg-gray-50">
-        <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3h4.5M4.5 21h15M4.5 3a1.5 1.5 0 00-1.5 1.5V6h18V4.5A1.5 1.5 0 0019.5 3M3 6v12a1.5 1.5 0 001.5 1.5h15A1.5 1.5 0 0021 18V6H3z" />
-        </svg>
-        <div>
-          <h3 class="font-semibold text-gray-900">EraDeepTech</h3>
-          <p class="text-gray-600 text-sm">Instruktur spesialis dengan keahlian teknis mendalam.</p>
-        </div>
-      </div>
-
-      <!-- EraLive -->
-      <div class="flex items-start gap-3 p-4 rounded-lg bg-pink-50">
-        <svg class="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.868v4.264a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-        </svg>
-        <div>
-          <h3 class="font-semibold text-gray-900">EraLive</h3>
-          <p class="text-gray-600 text-sm">Instruktur live workshop & bootcamp intensif.</p>
-        </div>
-      </div>
-
+    <!-- EraLecture -->
+    <div onclick="showDetail('EraLecture')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:bg-purple-50 transition">
+      <img src="https://img.icons8.com/ios-filled/50/000000/classroom.png" class="w-10 h-10 mx-auto mb-2"/>
+      <h3 class="text-center font-semibold text-gray-800">EraLecture</h3>
     </div>
+
+    <!-- EraStudio -->
+    <div onclick="showDetail('EraStudio')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:bg-red-50 transition">
+      <img src="https://img.icons8.com/ios-filled/50/000000/video.png" class="w-10 h-10 mx-auto mb-2"/>
+      <h3 class="text-center font-semibold text-gray-800">EraStudio</h3>
+    </div>
+
+    <!-- EraCareer -->
+    <div onclick="showDetail('EraCareer')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:bg-green-50 transition">
+      <img src="https://img.icons8.com/ios-filled/50/000000/work.png" class="w-10 h-10 mx-auto mb-2"/>
+      <h3 class="text-center font-semibold text-gray-800">EraCareer</h3>
+    </div>
+
+    <!-- EraTeamUp -->
+    <div onclick="showDetail('EraTeamUp')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:bg-yellow-50 transition">
+      <img src="https://img.icons8.com/ios-filled/50/000000/conference.png" class="w-10 h-10 mx-auto mb-2"/>
+      <h3 class="text-center font-semibold text-gray-800">EraTeamUp</h3>
+    </div>
+
+    <!-- EraDeepTech -->
+    <div onclick="showDetail('EraDeepTech')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:bg-gray-100 transition">
+      <img src="https://img.icons8.com/ios-filled/50/000000/artificial-intelligence.png" class="w-10 h-10 mx-auto mb-2"/>
+      <h3 class="text-center font-semibold text-gray-800">EraDeepTech</h3>
+    </div>
+
   </div>
 </div>
+
+<!-- Detail Box -->
+<div id="detailBox" class="hidden max-w-3xl mx-auto bg-white rounded-xl shadow p-6 mt-4">
+  <h3 id="detailTitle" class="text-xl font-bold text-gray-900 mb-2"></h3>
+  <p id="detailDesc" class="text-gray-600"></p>
+</div>
+
+<script>
+  const details = {
+    "EraPraxis": "Instruktur praktisi industri dengan pengalaman nyata.",
+    "EraLecture": "Instruktur akademisi dengan dasar teori yang kuat.",
+    "EraStudio": "Instruktur kreatif dengan pendekatan project & storytelling.",
+    "EraCareer": "Instruktur fokus karier, portfolio, dan persiapan kerja.",
+    "EraTeamUp": "Instruktur kolaboratif untuk proyek tim dan networking.",
+    "EraDeepTech": "Instruktur spesialis dengan keahlian teknis mendalam."
+  }
+
+  function showDetail(key) {
+    document.getElementById("detailBox").classList.remove("hidden")
+    document.getElementById("detailTitle").innerText = key
+    document.getElementById("detailDesc").innerText = details[key]
+  }
+</script>
+
+<style>
+/* Hilangkan scrollbar biar clean */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
 
   
 <!-- Registration Requirements Section -->
