@@ -174,77 +174,85 @@
     </div>
   
 <div class="max-w-6xl mx-auto py-10 px-4">
-  <h2 class="text-2xl font-bold text-gray-900 mb-4">Kategori Instruktur</h2>
-  
+  <h2 class="text-2xl font-bold text-gray-900 mb-6">Kategori Instruktur</h2>
+
   <!-- Wrapper Scroll -->
   <div class="flex space-x-4 overflow-x-auto pb-4 scrollbar-hide">
     
     <!-- EraPraxis -->
-    <div onclick="showDetail('EraPraxis')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:bg-blue-50 transition">
-      <img src="https://img.icons8.com/ios-filled/50/000000/briefcase.png" class="w-10 h-10 mx-auto mb-2"/>
-      <h3 class="text-center font-semibold text-gray-800">EraPraxis</h3>
+    <div onclick="openModal('EraPraxis')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:shadow-lg hover:bg-blue-50 transition text-center">
+      <img src="https://img.icons8.com/ios-filled/50/3b82f6/briefcase.png" class="w-12 h-12 mx-auto mb-2"/>
+      <h3 class="font-semibold text-gray-800">EraPraxis</h3>
     </div>
 
     <!-- EraLecture -->
-    <div onclick="showDetail('EraLecture')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:bg-purple-50 transition">
-      <img src="https://img.icons8.com/ios-filled/50/000000/classroom.png" class="w-10 h-10 mx-auto mb-2"/>
-      <h3 class="text-center font-semibold text-gray-800">EraLecture</h3>
+    <div onclick="openModal('EraLecture')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:shadow-lg hover:bg-purple-50 transition text-center">
+      <img src="https://img.icons8.com/ios-filled/50/8b5cf6/classroom.png" class="w-12 h-12 mx-auto mb-2"/>
+      <h3 class="font-semibold text-gray-800">EraLecture</h3>
     </div>
 
     <!-- EraStudio -->
-    <div onclick="showDetail('EraStudio')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:bg-red-50 transition">
-      <img src="https://img.icons8.com/ios-filled/50/000000/video.png" class="w-10 h-10 mx-auto mb-2"/>
-      <h3 class="text-center font-semibold text-gray-800">EraStudio</h3>
+    <div onclick="openModal('EraStudio')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:shadow-lg hover:bg-red-50 transition text-center">
+      <img src="https://img.icons8.com/ios-filled/50/ef4444/video.png" class="w-12 h-12 mx-auto mb-2"/>
+      <h3 class="font-semibold text-gray-800">EraStudio</h3>
     </div>
 
     <!-- EraCareer -->
-    <div onclick="showDetail('EraCareer')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:bg-green-50 transition">
-      <img src="https://img.icons8.com/ios-filled/50/000000/work.png" class="w-10 h-10 mx-auto mb-2"/>
-      <h3 class="text-center font-semibold text-gray-800">EraCareer</h3>
+    <div onclick="openModal('EraCareer')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:shadow-lg hover:bg-green-50 transition text-center">
+      <img src="https://img.icons8.com/ios-filled/50/10b981/work.png" class="w-12 h-12 mx-auto mb-2"/>
+      <h3 class="font-semibold text-gray-800">EraCareer</h3>
     </div>
 
     <!-- EraTeamUp -->
-    <div onclick="showDetail('EraTeamUp')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:bg-yellow-50 transition">
-      <img src="https://img.icons8.com/ios-filled/50/000000/conference.png" class="w-10 h-10 mx-auto mb-2"/>
-      <h3 class="text-center font-semibold text-gray-800">EraTeamUp</h3>
+    <div onclick="openModal('EraTeamUp')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:shadow-lg hover:bg-yellow-50 transition text-center">
+      <img src="https://img.icons8.com/ios-filled/50/f59e0b/conference.png" class="w-12 h-12 mx-auto mb-2"/>
+      <h3 class="font-semibold text-gray-800">EraTeamUp</h3>
     </div>
 
     <!-- EraDeepTech -->
-    <div onclick="showDetail('EraDeepTech')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:bg-gray-100 transition">
-      <img src="https://img.icons8.com/ios-filled/50/000000/artificial-intelligence.png" class="w-10 h-10 mx-auto mb-2"/>
-      <h3 class="text-center font-semibold text-gray-800">EraDeepTech</h3>
+    <div onclick="openModal('EraDeepTech')" class="flex-shrink-0 w-40 cursor-pointer bg-white p-4 rounded-xl shadow hover:shadow-lg hover:bg-gray-100 transition text-center">
+      <img src="https://img.icons8.com/ios-filled/50/6b7280/artificial-intelligence.png" class="w-12 h-12 mx-auto mb-2"/>
+      <h3 class="font-semibold text-gray-800">EraDeepTech</h3>
     </div>
 
   </div>
 </div>
 
-<!-- Detail Box -->
-<div id="detailBox" class="hidden max-w-3xl mx-auto bg-white rounded-xl shadow p-6 mt-4">
-  <h3 id="detailTitle" class="text-xl font-bold text-gray-900 mb-2"></h3>
-  <p id="detailDesc" class="text-gray-600"></p>
+<!-- Modal -->
+<div id="categoryModal" class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center z-50">
+  <div class="bg-white rounded-2xl shadow-xl max-w-lg w-full p-6 relative animate-fadeIn">
+    <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+    <h3 id="modalTitle" class="text-2xl font-bold text-gray-900 mb-3"></h3>
+    <p id="modalDesc" class="text-gray-600"></p>
+  </div>
 </div>
 
 <script>
-  const details = {
-    "EraPraxis": "Instruktur praktisi industri dengan pengalaman nyata.",
-    "EraLecture": "Instruktur akademisi dengan dasar teori yang kuat.",
-    "EraStudio": "Instruktur kreatif dengan pendekatan project & storytelling.",
-    "EraCareer": "Instruktur fokus karier, portfolio, dan persiapan kerja.",
-    "EraTeamUp": "Instruktur kolaboratif untuk proyek tim dan networking.",
-    "EraDeepTech": "Instruktur spesialis dengan keahlian teknis mendalam."
+  const categoryDetails = {
+    "EraPraxis": "Instruktur praktisi industri dengan pengalaman nyata, cocok untuk belajar langsung dari lapangan.",
+    "EraLecture": "Instruktur akademisi dengan dasar teori yang kuat, ideal untuk pondasi pengetahuan.",
+    "EraStudio": "Instruktur kreatif dengan pendekatan berbasis project & storytelling, bikin belajar lebih hidup.",
+    "EraCareer": "Instruktur fokus karier: portfolio, interview, dan persiapan kerja.",
+    "EraTeamUp": "Instruktur kolaboratif untuk proyek tim, networking, dan kerja bareng.",
+    "EraDeepTech": "Instruktur spesialis di bidang AI, data, dan teknologi tingkat lanjut."
+  };
+
+  function openModal(category) {
+    document.getElementById("modalTitle").innerText = category;
+    document.getElementById("modalDesc").innerText = categoryDetails[category];
+    document.getElementById("categoryModal").classList.remove("hidden");
   }
 
-  function showDetail(key) {
-    document.getElementById("detailBox").classList.remove("hidden")
-    document.getElementById("detailTitle").innerText = key
-    document.getElementById("detailDesc").innerText = details[key]
+  function closeModal() {
+    document.getElementById("categoryModal").classList.add("hidden");
   }
 </script>
 
 <style>
-/* Hilangkan scrollbar biar clean */
 .scrollbar-hide::-webkit-scrollbar { display: none; }
 .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+@keyframes fadeIn { from { opacity:0; transform:scale(0.95);} to { opacity:1; transform:scale(1);} }
+.animate-fadeIn { animation: fadeIn 0.2s ease-in-out; }
 </style>
 
   
